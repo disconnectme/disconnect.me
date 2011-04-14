@@ -1,0 +1,154 @@
+/*
+  The style sheet for disconnectere.com.
+
+  Copyright 2010 Brian Kennish
+
+  Licensed under the Apache License, Version 2.0 (the "License"); you may not
+  use this file except in compliance with the License. You may obtain a copy of
+  the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+  License for the specific language governing permissions and limitations under
+  the License.
+
+  Brian Kennish <byoogle@gmail.com>
+*/
+body, #mc-embedded-subscribe, :link, a:active, :visited { color: white }
+
+body, input { font-family: 'Lucida Sans', Tahoma, Verdana, sans-serif }
+
+body {
+  margin: 0;
+  background: #6d84b3;
+  text-shadow: 1px 1px 0 #3c5a98
+}
+
+#header, .name, input { font-size: 20px }
+
+#header {
+  background: #3c5a98;
+  height: 200px
+}
+
+.content, #footer { width: 840px }
+    /* The footer has to have layout for the drop shadow to render. */
+
+.content {
+  margin: auto;
+  padding-right: 50px
+}
+
+#header img { float: left }
+
+#header .name { font-size: 64px }
+
+#header .description, #next a { color: #d2dbed }
+
+#features { margin: -32px 0 0 16px }
+
+.feature,
+.feature .description,
+#installation,
+#installation a,
+#installation .description,
+#subscription,
+#next { display: inline-block }
+
+.feature, #installation, #footer { text-align: center }
+
+.feature img {
+  border: 1px solid #3c5a98;
+  width: 160px;
+  height: 120px
+}
+
+.feature .description, #footer, #next {
+  filter: dropshadow(offx=1, offy=1, color=#3c5a98)
+}
+
+.feature .description { width: 200px }
+
+#installation, #installation .description, #subscription img, #footer img {
+  vertical-align: top
+}
+
+#installation { margin-left: 32px }
+
+#installation a, #subscription {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  color: black;
+  text-shadow: none
+}
+
+#installation a, #mc-embedded-subscribe { cursor: pointer }
+
+#installation a {
+  border: 1px solid #fc3;
+  background: #ffc;
+  padding: 4px;
+  width: 360px;
+  text-decoration: none
+}
+
+#installation .description { margin-right: 4px }
+
+a img { border: none }
+
+#subscription, .email { border: 1px solid #739be2 }
+
+#subscription, input { padding: 8px }
+
+#subscription {
+  margin-left: 20px;
+  background: #f3f7fc;
+  width: 380px
+}
+
+input { margin: 8px 0 }
+
+.email { width: 240px }
+
+.ghosted { color: graytext }
+
+#mc-embedded-subscribe {
+  float: right;
+  border: 1px solid #9b001d;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: #d42014
+}
+
+.ie {
+  width: 112px;
+  height: 40px
+}
+
+span.mce_inline_error, .response {
+  margin-bottom: 8px;
+  font-style: italic
+}
+
+span.mce_inline_error, #mce-error-response { color: maroon }
+
+.response, #next { display: none }
+
+#mce-success-response { color: green }
+
+.note, #footer { font-size: small }
+
+#footer a { vertical-align: bottom }
+
+#footer img { margin-top: 4px }
+
+#next {
+  position: relative;
+  left: 320px;
+  bottom: 36px;
+  width: 100px
+      /* The element has to have layout for the drop shadow to render. */
+}
