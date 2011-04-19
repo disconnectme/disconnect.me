@@ -1,126 +1,113 @@
 /*
-  The style sheet for disconnectere.com.
+  The style sheet for disconnect.me.
 
-  Copyright 2010 Brian Kennish
+  Copyright 2010, 2011 Disconnect, Inc.
 
-  Licensed under the Apache License, Version 2.0 (the "License"); you may not
-  use this file except in compliance with the License. You may obtain a copy of
-  the License at
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
 
-    http://www.apache.org/licenses/LICENSE-2.0
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-  License for the specific language governing permissions and limitations under
-  the License.
+  You should have received a copy of the GNU General Public License along with
+  this program. If not, see <http://www.gnu.org/licenses/>.
 
   Brian Kennish <byoogle@gmail.com>
 */
-body, #mc-embedded-subscribe, :link, a:active, :visited { color: white }
-
 body, input { font-family: 'Lucida Sans', Tahoma, Verdana, sans-serif }
 
 body {
   margin: 0;
-  background: #6d84b3;
-  text-shadow: 1px 1px 0 #3c5a98
+  color: #333
 }
 
 #header, .name, input { font-size: 20px }
 
 #header {
-  background: #3c5a98;
+  background: #edeff4;
   height: 200px
 }
 
-.content, #footer { width: 840px }
-    /* The footer has to have layout for the drop shadow to render. */
-
 .content {
   margin: auto;
-  padding-right: 50px
+  padding-right: 50px;
+  width: 840px
 }
 
-#header img { float: left }
+#header .content, .feature, #installation, #footer { text-align: center }
 
-#header .name { font-size: 64px }
+#header .description, #footer img { margin-top: 4px }
 
-#header .description, #next a { color: #d2dbed }
-
-#features { margin: -32px 0 0 16px }
+#features { margin: -40px 0 0 16px }
 
 .feature,
 .feature .description,
 #installation,
 #installation a,
 #installation .description,
-#subscription,
-#next { display: inline-block }
-
-.feature, #installation, #footer { text-align: center }
+#subscription { display: inline-block }
 
 .feature img {
-  border: 1px solid #3c5a98;
+  border: 1px solid #e5eaf1;
   width: 160px;
   height: 120px
 }
 
-.feature .description, #footer, #next {
-  filter: dropshadow(offx=1, offy=1, color=#3c5a98)
-}
+.feature .description, .note, #footer { font-size: small }
 
 .feature .description { width: 200px }
 
-#installation, #installation .description, #subscription img, #footer img {
-  vertical-align: top
-}
+#actions { margin-left: 32px }
 
-#installation { margin-left: 32px }
+#installation, #footer img { vertical-align: top }
 
 #installation a, #subscription {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  color: black;
-  text-shadow: none
+  width: 366px
 }
 
-#installation a, #mc-embedded-subscribe { cursor: pointer }
+#installation a, input { margin: 8px 0 }
+
+#installation a, .ghosted { color: graytext }
 
 #installation a {
-  border: 1px solid #fc3;
-  background: #ffc;
+  border: 1px solid #c9c7ba;
+  background: #f5f4ea;
   padding: 4px;
-  width: 360px;
+  height: 64px;
   text-decoration: none
 }
 
-#installation .description { margin-right: 4px }
+#installation .activated, #subscription { color: black }
 
-a img { border: none }
-
-#subscription, .email { border: 1px solid #739be2 }
+#installation .activated {
+  border: 1px solid #fc0;
+  background: #fe8
+}
 
 #subscription, input { padding: 8px }
 
+#subscription, .email { border: 1px solid #93b4d9 }
+
 #subscription {
   margin-left: 20px;
-  background: #f3f7fc;
-  width: 380px
+  background: #cadef4
 }
 
-input { margin: 8px 0 }
-
-.email { width: 240px }
-
-.ghosted { color: graytext }
+.email { width: 226px }
 
 #mc-embedded-subscribe {
   float: right;
   border: 1px solid #9b001d;
   border-radius: 4px;
   -moz-border-radius: 4px;
-  background: #d42014
+  background: #d42014;
+  color: white;
+  cursor: pointer
 }
 
 .ie {
@@ -135,20 +122,12 @@ span.mce_inline_error, .response {
 
 span.mce_inline_error, #mce-error-response { color: maroon }
 
-.response, #next { display: none }
+.response { display: none }
 
 #mce-success-response { color: green }
 
-.note, #footer { font-size: small }
-
 #footer a { vertical-align: bottom }
 
-#footer img { margin-top: 4px }
+#footer :link, #footer a:active, #footer :visited { color: #003ea8 }
 
-#next {
-  position: relative;
-  left: 320px;
-  bottom: 36px;
-  width: 100px
-      /* The element has to have layout for the drop shadow to render. */
-}
+#footer img { border: none }
