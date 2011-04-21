@@ -23,40 +23,34 @@
 jQuery(function() {
   jQuery('.feature a').lightBox();
   var browser = jQuery.browser;
-  var activated;
-  var markup = '<br>';
+  var mozilla = browser.mozilla;
+  var textbox = jQuery('#mce-EMAIL');
   var button = jQuery('#mc-embedded-subscribe');
 
-  if (browser.webkit) {
-    activated = true;
-    markup += 'Install <span class="name">Disconnect</span>';
-  } else {
-    markup +=
-        'Subscribe to the Disconnect Newsletter to<br>find out when your browser is supported';
-    if (browser.msie) button.addClass('ie');
-  }
-
-  var textbox = jQuery('#mce-EMAIL');
-
-  setTimeout(function() {
-    var attribute = 'tabindex';
-
-    if (activated) {
+  if (mozilla || browser.webkit) {
+    setTimeout(function() {
+      var attribute = 'tabindex';
       jQuery('#installation a').
         addClass('activated').
         attr(attribute, 1).
         attr(
           'href',
-          navigator.userAgent.indexOf('Chrome') >= 0 ?
-              'https://chrome.google.com/extensions/detail/jeoacafpbcihiomhlakheieifhpjdfeo'
-                  : 'disconnect.safariextz'
+          mozilla ? 'disconnect.xpi' :
+              navigator.userAgent.indexOf('Chrome') >= 0 ?
+                  'https://chrome.google.com/extensions/detail/jeoacafpbcihiomhlakheieifhpjdfeo'
+                      : 'disconnect.safariextz'
         );
       textbox.attr(attribute, 2);
       button.attr(attribute, 3);
-    }
+    }, 1000);
+  } else {
+    jQuery('#installation .note').html(function(index, markup) {
+      return markup +
+          '<br>— subscribe to find out when your browser is supported';
+    });
 
-    jQuery('#installation .description').html(markup);
-  }, 1000);
+    if (browser.msie) button.addClass('ie');
+  }
 
   var className = 'ghosted';
 
@@ -64,5 +58,5 @@ jQuery(function() {
     if (textbox.hasClass(className)) textbox.removeClass(className).val('');
   }).blur(function() {
     if (textbox.val() == '') textbox.addClass(className).val('Email address');
-  }).blur();
+  }).val('').blur();
 });
