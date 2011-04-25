@@ -65,11 +65,13 @@ body {
 
 .feature .description, .note, #footer { font-size: small }
 
-.feature .description { width: 200px }
+.feature .description, .iphone { width: 200px }
 
 #actions { margin-left: 32px }
 
 #installation, #footer img { vertical-align: top }
+
+#installation { width: 380px }
 
 #installation a, #subscription {
   -moz-border-radius: 8px;

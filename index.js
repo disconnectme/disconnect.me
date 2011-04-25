@@ -42,23 +42,24 @@ jQuery(function() {
   if (mozilla || browser.webkit) {
     setTimeout(function() {
       var attribute = 'tabindex';
+      var tokens = navigator.userAgent;
       jQuery('#installation a').
         addClass('activated').
         attr(attribute, 1).
         attr(
           'href',
           mozilla ? 'disconnect.xpi' :
-              navigator.userAgent.indexOf('Chrome') >= 0 ?
+              tokens.indexOf('Chrome') >= 0 ?
                   'https://chrome.google.com/extensions/detail/jeoacafpbcihiomhlakheieifhpjdfeo'
                       : 'disconnect.safariextz'
         );
+      if (tokens.indexOf('iPhone') >= 0) textbox.addClass('iphone');
       textbox.attr(attribute, 2);
       button.attr(attribute, 3);
     }, 1000);
   } else {
     jQuery('#installation .note').html(function(index, markup) {
-      return markup +
-          '<br>— subscribe to find out when your browser is supported';
+      return markup + '— subscribe to find out when your browser is supported';
     });
 
     if (browser.msie) button.addClass('ie');
