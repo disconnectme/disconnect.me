@@ -21,7 +21,19 @@
 /* Registers lightboxing, installation, and subscription handlers. */
 // MailChimp unaliases "$".
 jQuery(function() {
-  jQuery('.feature a').lightBox();
+  jQuery('.feature img:first-child').each(function() {
+    var thumbnail = jQuery(this);
+
+    thumbnail.click(function() {
+      var modal = thumbnail.next();
+
+      modal.lightbox_me({
+        centered: true,
+        onClose: function() { thumbnail.after(modal); }
+      });
+    });
+  });
+
   var browser = jQuery.browser;
   var mozilla = browser.mozilla;
   var textbox = jQuery('#mce-EMAIL');

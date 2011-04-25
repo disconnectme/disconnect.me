@@ -39,22 +39,29 @@ body {
 
 #header .content, .feature, #installation, #footer { text-align: center }
 
+#header img, #footer img { border: none }
+
 #header .description, #footer img { margin-top: 4px }
 
 #features { margin: -40px 0 0 16px }
 
 .feature,
+.feature img:first-child,
 .feature .description,
 #installation,
 #installation a,
 #installation .description,
 #subscription { display: inline-block }
 
-.feature img {
+.feature img:first-child, #mc-embedded-subscribe { cursor: pointer }
+
+.feature img:first-child {
   border: 1px solid #e5eaf1;
   width: 160px;
   height: 120px
 }
+
+.feature img, .response { display: none }
 
 .feature .description, .note, #footer { font-size: small }
 
@@ -106,8 +113,7 @@ body {
   border-radius: 4px;
   -moz-border-radius: 4px;
   background: #d42014;
-  color: white;
-  cursor: pointer
+  color: white
 }
 
 .ie {
@@ -122,12 +128,10 @@ span.mce_inline_error, .response {
 
 span.mce_inline_error, #mce-error-response { color: maroon }
 
-.response { display: none }
-
 #mce-success-response { color: green }
 
 #footer a { vertical-align: bottom }
 
 #footer :link, #footer a:active, #footer :visited { color: #003ea8 }
 
-#footer img { border: none }
+img { border: 1px solid #333 }
