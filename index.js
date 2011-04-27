@@ -15,7 +15,9 @@
   You should have received a copy of the GNU General Public License along with
   this program. If not, see <http://www.gnu.org/licenses/>.
 
-  Brian Kennish <byoogle@gmail.com>
+  Authors (one per line):
+
+    Brian Kennish <byoogle@gmail.com>
 */
 
 /* Registers lightboxing, installation, and subscription handlers. */
@@ -36,13 +38,15 @@ jQuery(function() {
 
   var browser = jQuery.browser;
   var mozilla = browser.mozilla;
+  var tokens;
   var textbox = jQuery('#mce-EMAIL');
   var button = jQuery('#mc-embedded-subscribe');
 
   if (mozilla || browser.webkit) {
+    tokens = navigator.userAgent;
+
     setTimeout(function() {
       var attribute = 'tabindex';
-      var tokens = navigator.userAgent;
       jQuery('#installation a').
         addClass('activated').
         attr(attribute, 1).
@@ -53,10 +57,11 @@ jQuery(function() {
                   'https://chrome.google.com/extensions/detail/jeoacafpbcihiomhlakheieifhpjdfeo'
                       : 'disconnect.safariextz'
         );
-      if (tokens.indexOf('iPhone') >= 0) textbox.addClass('iphone');
       textbox.attr(attribute, 2);
       button.attr(attribute, 3);
     }, 1000);
+
+    if (tokens.indexOf('iPhone') >= 0) textbox.addClass('iphone');
   } else {
     jQuery('#installation .note').html(function(index, markup) {
       return markup + '— subscribe to find out when your browser is supported';

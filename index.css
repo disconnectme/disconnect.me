@@ -15,7 +15,9 @@
   You should have received a copy of the GNU General Public License along with
   this program. If not, see <http://www.gnu.org/licenses/>.
 
-  Brian Kennish <byoogle@gmail.com>
+  Authors (one per line):
+
+    Brian Kennish <byoogle@gmail.com>
 */
 body, input { font-family: 'Lucida Sans', Tahoma, Verdana, sans-serif }
 
@@ -65,7 +67,7 @@ body {
 
 .feature .description, .note, #footer { font-size: small }
 
-.feature .description, .iphone { width: 200px }
+.feature .description, .email.iphone { width: 200px }
 
 #actions { margin-left: 32px }
 
