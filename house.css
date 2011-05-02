@@ -1,5 +1,5 @@
 /*
-  The style sheet for disconnect.me.
+  The house style sheet for disconnect.me.
 
   Copyright 2010, 2011 Disconnect, Inc.
 
@@ -39,9 +39,9 @@ body {
   width: 840px
 }
 
-#header .content, .feature, #installation, #footer { text-align: center }
+#header .content, #features, #installation, #footer { text-align: center }
 
-#header img, #footer img { border: none }
+.content img { border: none }
 
 #header .description, #footer img { margin-top: 4px }
 
