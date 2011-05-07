@@ -19,6 +19,8 @@
 
     Brian Kennish <byoogle@gmail.com>
 */
+html { -webkit-text-size-adjust: none }
+
 body, input { font-family: 'Lucida Sans', Tahoma, Verdana, sans-serif }
 
 body {
