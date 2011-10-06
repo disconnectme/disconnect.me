@@ -38,6 +38,10 @@ body {
 
 #header > table { margin-bottom: -52px }
 
+#header td, #content > .description, #features, #installation, #footer {
+  text-align: center
+}
+
 #content img { border: none }
 
 #header .description {
@@ -113,10 +117,6 @@ body {
 .tab .label { padding-top: 9px }
 
 .tab.verbose .label { padding-top: 2px }
-
-#content > .description, #features, #installation, #footer {
-  text-align: center
-}
 
 .description table,
 .feature,
