@@ -95,8 +95,8 @@ jQuery(function($) {
       var buttonPrefix = '.button';
       var attribute = 'tabindex';
       var buttonTimeout = 150;
-      var buttonColor = '#b0281a';
-      var highlightedButtonColor = '#d42014';
+      var buttonColor = '#357ae8';
+      var highlightedButtonColor = '#4d90fe';
 
       $(buttonPrefix).
         removeClass(className).

@@ -172,7 +172,7 @@ body {
 
 .button {
   display: inline-block;
-  border: 1px solid #9b001d;
+  border: 1px solid #2f5bb7;
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -198,13 +198,13 @@ body {
   border-top-right-radius: 6px;
   -moz-border-top-right-radius: 6px;
   -webkit-border-top-right-radius: 6px;
-  background: #d42014;
+  background: #4d90fe;
   height: 40px
 }
 
 .inactive .button-surface.top { background: #f5f4ea }
 
-.highlighted .button-surface.top { background: #b0281a }
+.highlighted .button-surface.top { background: #357ae8 }
 
 .button-surface.bottom {
   border-bottom-right-radius: 6px;
@@ -213,13 +213,13 @@ body {
   border-bottom-left-radius: 6px;
   -moz-border-bottom-left-radius: 6px;
   -webkit-border-bottom-left-radius: 6px;
-  background: #b0281a;
+  background: #357ae8;
   height: 24px
 }
 
 .inactive .button-surface.bottom { background: #e2dfd6 }
 
-.highlighted .button-surface.bottom { background: #d42014 }
+.highlighted .button-surface.bottom { background: #4d90fe }
 
 .button .label { margin-top: -44px }
 
@@ -239,10 +239,10 @@ body {
 
 #mc-embedded-subscribe {
   float: right;
-  border: 1px solid #2f5bb7;
+  border: 1px solid #9b001d;
   border-radius: 4px;
   -moz-border-radius: 4px;
-  background: #4d90fe;
+  background: #d42014;
   color: white
 }
 
