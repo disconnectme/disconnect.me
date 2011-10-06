@@ -31,50 +31,99 @@
     <title>Disconnect</title>
     <link rel="stylesheet" href="house.css">
     <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.lightbox_me.js"></script>
     <script type="text/javascript" src="curvycorners.js"></script>
+    <script type="text/javascript" src="jquery.lightbox_me.js"></script>
     <script type="text/javascript" src="jquery.validate.js"></script>
     <script type="text/javascript" src="jquery.form.js"></script>
     <script type="text/javascript" src="mailchimp.js"></script>
     <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
-    <div id="header">
-      <div class="content">
-        <br>
-        <img src="disconnect.png" alt="Disconnect">
-        <div class="description">
-          A browser extension that stops major third parties and search
-          <br>
-          engines from tracking the webpages you go to and searches you do
+    <div id="content">
+      <br>
+      <div id="header">
+        <table>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>
+              <img src="disconnect.png" alt="Disconnect">
+              <br>
+              <span class="description">
+                &nbsp;Turn off unwanted web tracking&nbsp;
+              </span>
+            </td>
+          </tr>
+        </table>
+        <div id="tabs">
+          <table>
+            <tr>
+              <td>
+                <div class="tab" id="homepage">
+                  <div class="tab-surface">
+                    <div class="label">Disconnect</div>
+                  </div>
+                </div>
+              </td>
+              <td>&nbsp;</td>
+              <td>
+                <div class="tab verbose inactive" id="facebook" tabindex="3">
+                  <div class="tab-surface">
+                    <div class="label">
+                      Facebook<br>Disconnect
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>&nbsp;</td>
+              <td>
+                <div class="tab inactive" id="db" tabindex="4">
+                  <div class="tab-surface">
+                    <div class="label">Privacy icons</div>
+                  </div>
+                </div>
+              </td>
+              <td>&nbsp;&nbsp;</td>
+            </tr>
+          </table>
         </div>
       </div>
-    </div>
-    <div class="content">
+      <br>
+      <div class="description">
+        <table>
+          <tr>
+            <td>
+              <span class="name">Disconnect</span>
+              stops major third parties and search engines from tracking the
+              webpages you go to and searches you do
+            </td>
+          </tr>
+        </table>
+      </div>
+      <br>
       <div id="features">
         <span class="feature">
           <img src="webpage-unlabeled.png" alt="Webpage">
           <img src="webpage-unlabeled.png" alt="Webpage">
           <br>
-          <span class="description">Disables third-party tracking</span>
+          <span class="description">Disable third-party tracking</span>
         </span>
         <span class="feature">
           <img src="search-unlabeled.png" alt="Search">
           <img src="search-unlabeled.png" alt="Search">
           <br>
-          <span class="description">Truly depersonalizes searches</span>
+          <span class="description">Truly depersonalize searches</span>
         </span>
         <span class="feature">
           <img src="toolbar-unlabeled.png" alt="Toolbar button">
           <img src="toolbar-unlabeled.png" alt="Toolbar button">
           <br>
-          <span class="description">Shows blocked requests</span>
+          <span class="description">See blocked requests</span>
         </span>
         <span class="feature">
           <img src="popup-unlabeled.png" alt="Popup bubble">
           <img src="popup-unlabeled.png" alt="Popup bubble">
           <br>
-          <span class="description">Allows easy unblocking</span>
+          <span class="description">Easily unblock services</span>
         </span>
       </div>
       <br>
@@ -87,21 +136,22 @@
           action="http://disconnectere.us2.list-manage1.com/subscribe/post?u=76c4adc61fe2dd1bc82fdac69&amp;id=4a55f2dd7e"
         >
           <div id="actions">
-            <span id="installation">
+            <div id="installation">
               <br>
               <br>
-              <a>
-                <br>
-                <span class="description">
+              <div class="button inactive">
+                <div class="button-surface top"></div>
+                <div class="button-surface bottom"></div>
+                <div class="label">
                   Install
                   <span class="name">Disconnect</span>
-                </span>
-              </a>
+                </div>
+              </div>
               <br>
               <span class="note">
                 Disconnect is available for Firefox, Chrome, and Safari
               </span>
-            </span>
+            </div>
             <span id="subscription">
               Learn more about how to control your data by subscribing to the
               <span class="name">Disconnect Newsletter</span>
@@ -138,6 +188,7 @@
           </div>
         </form>
       </div>
+      <br>
       <div id="footer">
         <p>
           We don’t collect your personal
