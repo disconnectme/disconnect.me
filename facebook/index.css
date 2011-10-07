@@ -1,0 +1,59 @@
+/*
+  The style sheet for Facebook Disconnect's homepage.
+
+  Copyright 2010, 2011 Disconnect, Inc.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program. If not, see <http://www.gnu.org/licenses/>.
+
+  Authors (one per line):
+
+    Brian Kennish <byoogle@gmail.com>
+*/
+.description table {
+  border: 1px solid #fc0;
+  background: #fe8
+}
+
+.description td { width: 360px }
+
+#content .feature img:first-child {
+  border: 1px solid #333;
+  width: 360px
+}
+
+.feature .description { width: 400px }
+
+.button { border: 1px solid #9b001d }
+
+.button-surface { width: 286px }
+
+.button-surface.top { background: #d42014 }
+
+.highlighted .button-surface.top { background: #b0281a }
+
+.button-surface.bottom { background: #b0281a }
+
+.highlighted .button-surface.bottom { background: #d42014 }
+
+.button .label { margin-top: -40px }
+
+.button .name { font-size: 16px }
+
+#subscription, .email { border: 1px solid #93b4d9 }
+
+#subscription { background: #cadef4 }
+
+#mc-embedded-subscribe {
+  border: 1px solid #2f5bb7;
+  background: #4d90fe
+}
