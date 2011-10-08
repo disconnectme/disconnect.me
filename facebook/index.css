@@ -19,19 +19,32 @@
 
     Brian Kennish <byoogle@gmail.com>
 */
-.description table {
-  border: 1px solid #fc0;
-  background: #fe8
+#body {
+  border: 1px solid #999;
+  background: #eee url(opengraph.png);
+  width: 840px;
+  height: 420px
 }
 
-.description td { width: 360px }
-
-#content .feature img:first-child {
-  border: 1px solid #333;
-  width: 360px
+#body .description {
+  margin-left: auto;
+  margin-right: auto;
+  opacity: .75;
+  border: 1px solid black;
+  background: #333;
+  padding: 8px;
+  width: 480px;
+  color: white
 }
 
-.feature .description { width: 400px }
+.description img {
+  float: left;
+  margin-right: 8px
+}
+
+ul { margin-bottom: 0 }
+
+#mc_embed_signup { margin-top: 103px }
 
 .button { border: 1px solid #9b001d }
 
