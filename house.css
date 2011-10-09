@@ -50,11 +50,15 @@ body {
   color: #666
 }
 
-#tabs { text-align: right }
+#tabs {
+  margin-bottom: -4px;
+  text-align: right
+}
+
+#tabs.ie { margin-bottom: -3px }
 
 #tabs table {
   display: inline-block;
-  margin-bottom: -4px;
   border-collapse: collapse
 }
 
@@ -126,11 +130,6 @@ body {
 #subscription { display: inline-block }
 
 .description table, #subscription, a { color: black }
-
-.description table, #subscription {
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px
-}
 
 .description table {
   border: 1px solid #93b4d9;
@@ -221,7 +220,10 @@ body {
 
 .highlighted .button-surface.bottom { background: #4d90fe }
 
-.button .label { margin-top: -44px }
+.button .label {
+  position: relative;
+  margin-top: -44px
+}
 
 .button .name { font-size: 24px }
 
@@ -231,6 +233,8 @@ body {
 
 #subscription {
   margin-left: 20px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
   background: #fe8;
   width: 366px
 }
@@ -246,7 +250,7 @@ body {
   color: white
 }
 
-.ie {
+#mc-embedded-subscribe.ie {
   width: 112px;
   height: 40px
 }

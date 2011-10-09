@@ -138,7 +138,7 @@ jQuery(function($) {
       return markup + '— subscribe to find out when your browser is supported';
     });
 
-    if (browser.msie) button.addClass('ie');
+    if (browser.msie) $('#tabs').add(button).addClass('ie');
   }
 
   textbox.focus(function() {
