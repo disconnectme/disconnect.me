@@ -125,10 +125,11 @@ body {
 #installation,
 #subscription { display: inline-block }
 
+.description table, #subscription, a { color: black }
+
 .description table, #subscription {
   -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  color: black
+  -webkit-border-radius: 8px
 }
 
 .description table {
@@ -265,10 +266,7 @@ span.mce_inline_error, #mce-error-response { color: maroon }
   text-align: center
 }
 
-a {
-  text-decoration: none;
-  color: #003ea8
-}
+a { text-decoration: none }
 
 #footer {
   border-top: 1px solid #93b4d9;
@@ -278,6 +276,6 @@ a {
   color: #888
 }
 
-#footer a:hover, #footer a:active { border-bottom: 1px solid #003ea8 }
+#footer a:hover, #footer a:active { border-bottom: 1px solid black }
 
 img { border: 1px solid #333 }
