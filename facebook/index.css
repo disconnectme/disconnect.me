@@ -30,6 +30,7 @@
   margin-left: auto;
   margin-right: auto;
   opacity: .75;
+  filter: Alpha(opacity=75);
   border: 1px solid black;
   background: #333;
   padding: 8px;
