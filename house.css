@@ -36,7 +36,7 @@ body {
 
 #header { border-bottom: 1px solid #93b4d9 }
 
-#header > table { margin-bottom: -52px }
+#header > table { margin-bottom: -50px }
 
 #header td, #content > .description, #features, #installation, #footer {
   text-align: center
@@ -44,9 +44,12 @@ body {
 
 #content img { border: none }
 
+#header img { width: 320px }
+
+#header .description, .name, input { font-size: 20px }
+
 #header .description {
   background: white;
-  font-size: 24px;
   color: #666
 }
 
@@ -142,8 +145,6 @@ body {
   height: 64px;
   vertical-align: middle
 }
-
-.name, input { font-size: 20px }
 
 #features { margin: 0 0 0 16px }
 
