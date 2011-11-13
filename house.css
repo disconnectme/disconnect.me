@@ -37,7 +37,7 @@ body { margin: 0 }
 
 #header > table { margin-bottom: -50px }
 
-#header td, #content > .description, #preview, #content > table td, #footer {
+#header td, #content > .description, #preview, #press td, #footer {
   text-align: center
 }
 
@@ -47,7 +47,7 @@ body { margin: 0 }
 
 #header .description, .name, input { font-size: 20px }
 
-#header .description, #footer { color: #888 }
+#header .description, #footer { color: #999 }
 
 #header .description { background: white }
 
@@ -125,6 +125,8 @@ body { margin: 0 }
 
 #actions { margin-left: 32px }
 
+#actions td { vertical-align: middle }
+
 #preview, #installation, #subscription { display: inline-block }
 
 #preview { width: 40% }
@@ -132,6 +134,8 @@ body { margin: 0 }
 #installation, #footer img { vertical-align: top }
 
 #installation { width: 59% }
+
+li { margin-top: 1em }
 
 .button, input { margin: 8px 0 }
 
@@ -236,9 +240,9 @@ span.mce_inline_error, #mce-error-response { color: maroon }
 
 #mce-success-response { color: green }
 
-.note, #content > table { font-size: small }
+.note, #press { font-size: small }
 
-#content > table td {
+#press td {
   width: 120px;
   height: 48px
 }
