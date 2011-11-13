@@ -154,7 +154,10 @@ li { margin-top: 1em }
   outline: none
 }
 
-.button.inactive { border: 1px solid #c9c7ba }
+.button.inactive {
+  border: 1px solid #c9c7ba;
+  cursor: default
+}
 
 .button.highlighted { color: #eee }
 
