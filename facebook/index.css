@@ -47,6 +47,11 @@ ul { margin-bottom: 0 }
 
 #mc_embed_signup { margin-top: 103px }
 
+#installation {
+  width: 380px;
+  text-align: center
+}
+
 .button { border: 1px solid #9b001d }
 
 .button-surface { width: 286px }

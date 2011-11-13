@@ -24,7 +24,7 @@
 function highlight(
   control, timeout, prefix, color, highlightedColor, unhighlight
 ) {
-  control = jQuery(control);
+  control = $(control);
 
   setTimeout(function() {
     control[unhighlight ? 'removeClass' : 'addClass']('highlighted');
@@ -32,7 +32,7 @@ function highlight(
 
   // CurvyCorners draws nested containers with style attributes.
   control.find(prefix + '-surface div').each(function() {
-    var container = jQuery(this);
+    var container = $(this);
     var background = 'background-color';
 
     switch (container.css(background)) {
@@ -50,9 +50,8 @@ function unhighlight(control, timeout, prefix, color, highlightedColor) {
   highlight(control, timeout, prefix, color, highlightedColor, true);
 }
 
-/* Registers tabbing, lightboxing, installation, and subscription handlers. */
-// MailChimp unaliases "$".
-jQuery(function($) {
+/* Registers tabbing, installation, and subscription handlers. */
+$(function($) {
   var tabPrefix = '.tab';
   var tab = $(tabPrefix + '.inactive');
   var tabTimeout = 100;
@@ -66,19 +65,6 @@ jQuery(function($) {
   }).click(function() {
     var id = this.id;
     location = '/' + (id == 'homepage' ? '' : id);
-  });
-
-  $('.feature img:first-child').each(function() {
-    var thumbnail = $(this);
-
-    thumbnail.click(function() {
-      var modal = thumbnail.next();
-
-      modal.lightbox_me({
-        centered: true,
-        onClose: function() { thumbnail.after(modal); }
-      });
-    });
   });
 
   var browser = $.browser;
@@ -133,13 +119,7 @@ jQuery(function($) {
     }, 1000);
 
     if (tokens.indexOf('iPhone') >= 0) textbox.addClass('iphone');
-  } else {
-    $('#installation .note').html(function(index, markup) {
-      return markup + '— subscribe to find out when your browser is supported';
-    });
-
-    if (browser.msie) $('#tabs').add(button).addClass('ie');
-  }
+  } else if (browser.msie) $('#tabs').add(button).addClass('ie');
 
   textbox.focus(function() {
     if (textbox.hasClass(className)) textbox.removeClass(className).val('');

@@ -23,10 +23,9 @@ html { -webkit-text-size-adjust: none }
 
 body, input { font-family: 'Lucida Sans', Tahoma, Verdana, sans-serif }
 
-body {
-  margin: 0;
-  color: #333
-}
+body, a { color: #333 }
+
+body { margin: 0 }
 
 #content {
   margin: auto;
@@ -38,7 +37,7 @@ body {
 
 #header > table { margin-bottom: -50px }
 
-#header td, #content > .description, #features, #installation, #footer {
+#header td, #content > .description, #preview, #content > table td, #footer {
   text-align: center
 }
 
@@ -48,10 +47,9 @@ body {
 
 #header .description, .name, input { font-size: 20px }
 
-#header .description {
-  background: white;
-  color: #666
-}
+#header .description, #footer { color: #888 }
+
+#header .description { background: white }
 
 #tabs {
   margin-bottom: -4px;
@@ -125,48 +123,15 @@ body {
 
 .tab.verbose .label { padding-top: 2px }
 
-.description table,
-.feature,
-.feature img:first-child,
-.feature .description,
-#installation,
-#subscription { display: inline-block }
-
-.description table, #subscription, a { color: black }
-
-.description table {
-  border: 1px solid #93b4d9;
-  background: #cadef4
-}
-
-.description td {
-  padding: 4px;
-  width: 480px;
-  height: 64px;
-  vertical-align: middle
-}
-
-#features { margin: 0 0 0 16px }
-
-.feature img:first-child, #mc-embedded-subscribe { cursor: pointer }
-
-.feature img:first-child {
-  border: 1px solid #e5eaf1;
-  width: 160px;
-  height: 120px
-}
-
-.feature img, .response { display: none }
-
-.feature .description, .note, #content > table { font-size: small }
-
-.feature .description, .email.iphone { width: 200px }
-
 #actions { margin-left: 32px }
+
+#preview, #installation, #subscription { display: inline-block }
+
+#preview { width: 40% }
 
 #installation, #footer img { vertical-align: top }
 
-#installation { width: 380px }
+#installation { width: 59% }
 
 .button, input { margin: 8px 0 }
 
@@ -237,10 +202,13 @@ body {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   background: #fe8;
-  width: 366px
+  width: 366px;
+  color: black
 }
 
 .email { width: 226px }
+
+.email.iphone { width: 200px }
 
 #mc-embedded-subscribe {
   float: right;
@@ -248,7 +216,8 @@ body {
   border-radius: 4px;
   -moz-border-radius: 4px;
   background: #d42014;
-  color: white
+  color: white;
+  cursor: pointer
 }
 
 #mc-embedded-subscribe.ie {
@@ -263,12 +232,15 @@ span.mce_inline_error, .response {
 
 span.mce_inline_error, #mce-error-response { color: maroon }
 
+.response { display: none }
+
 #mce-success-response { color: green }
+
+.note, #content > table { font-size: small }
 
 #content > table td {
   width: 120px;
-  height: 48px;
-  text-align: center
+  height: 48px
 }
 
 a { text-decoration: none }
@@ -276,11 +248,10 @@ a { text-decoration: none }
 #footer {
   border-top: 1px solid #93b4d9;
   padding-top: 8px;
-  font-size: 12px;
-  color: #888
+  font-size: 12px
 }
 
-#footer a:hover, #footer a:active { border-bottom: 1px solid black }
+#footer a:hover, #footer a:active { border-bottom: 1px solid #333 }
 
 #copyright {
   margin-top: -14px;
