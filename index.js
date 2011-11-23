@@ -50,6 +50,32 @@ function unhighlight(control, timeout, prefix, color, highlightedColor) {
   highlight(control, timeout, prefix, color, highlightedColor, true);
 }
 
+/* Choreographs a feature dance. */
+function preview() {
+  var screenshot = '#preview img';
+  var visible = ':visible';
+  var visibleScreenshot = screenshot + visible;
+  $(visibleScreenshot + ':lt(5)').hide();
+  $(visibleScreenshot).fadeOut();
+  var timeout = 0;
+  var feature = '.feature';
+
+  $(screenshot).each(function(index) {
+    var remainder = index % 2;
+
+    !remainder && setTimeout(function() {
+      $(feature + visible).fadeOut();
+      setTimeout(function() { $(feature).eq(index / 2).fadeIn(); }, 1000);
+    }, timeout);
+
+    setTimeout(function() { $(this).fadeIn(); }.bind(this), timeout + 2000);
+
+    timeout += 1000 + remainder * 2000;
+  });
+
+  setTimeout(preview, 30000);
+}
+
 /* Registers tabbing, installation, and subscription handlers. */
 $(function($) {
   var tabPrefix = '.tab';
@@ -67,6 +93,7 @@ $(function($) {
     location = '/' + (id == 'homepage' ? '' : id);
   });
 
+  setTimeout(preview, 1000);
   var browser = $.browser;
   var mozilla = browser.mozilla;
   var tokens;

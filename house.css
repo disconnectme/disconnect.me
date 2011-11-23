@@ -45,7 +45,7 @@ body { margin: 0 }
 
 #header img { width: 320px }
 
-#header .description, .name, input { font-size: 20px }
+#header .description, .name, .feature, input { font-size: 20px }
 
 #header .description, #footer { color: #999 }
 
@@ -125,17 +125,26 @@ body { margin: 0 }
 
 #actions { margin-left: 32px }
 
-#actions td { vertical-align: middle }
-
 #preview, #installation, #subscription { display: inline-block }
 
-#preview { width: 40% }
+#preview, #features { position: relative }
 
-#installation, #footer img { vertical-align: top }
+#preview {
+  width: 340px;
+  height: 420px
+}
 
-#installation { width: 59% }
+#preview img, .feature, .response { display: none }
 
-li { margin-top: 1em }
+#preview img, .feature { position: absolute }
+
+#preview img { left: 0 }
+
+#installation { width: 460px }
+
+#features { height: 16px }
+
+.feature { top: 0 }
 
 .button, input { margin: 8px 0 }
 
@@ -200,6 +209,10 @@ li { margin-top: 1em }
 
 .button .name { font-size: 24px }
 
+.note, #press { font-size: small }
+
+.note .name { font-size: medium }
+
 #subscription, input { padding: 8px }
 
 #subscription, .email { border: 1px solid #fc0 }
@@ -239,11 +252,7 @@ span.mce_inline_error, .response {
 
 span.mce_inline_error, #mce-error-response { color: maroon }
 
-.response { display: none }
-
 #mce-success-response { color: green }
-
-.note, #press { font-size: small }
 
 #press td {
   width: 120px;
