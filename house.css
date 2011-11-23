@@ -130,21 +130,22 @@ body { margin: 0 }
 #preview, #features { position: relative }
 
 #preview {
-  width: 340px;
+  width: 330px;
   height: 420px
 }
 
 #preview img, .feature, .response { display: none }
 
-#preview img, .feature { position: absolute }
+#preview img, .feature {
+  position: absolute;
+  top: 0
+}
 
 #preview img { left: 0 }
 
 #installation { width: 460px }
 
 #features { height: 16px }
-
-.feature { top: 0 }
 
 .button, input { margin: 8px 0 }
 
