@@ -37,7 +37,7 @@ body { margin: 0 }
 
 #header > table { margin-bottom: -50px }
 
-#header td, #content > .description, #preview, #press td, #footer {
+#header td, #content > .description, #actions td, #press td, #footer {
   text-align: center
 }
 
@@ -127,21 +127,19 @@ body { margin: 0 }
 
 #preview, #installation, #subscription { display: inline-block }
 
-#preview, #features { position: relative }
-
 #preview {
+  position: relative;
   width: 330px;
   height: 420px
 }
 
 #preview img, .feature, .response { display: none }
 
-#preview img, .feature {
+#preview img {
   position: absolute;
-  top: 0
+  top: 0;
+  left: 0
 }
-
-#preview img { left: 0 }
 
 #installation { width: 460px }
 
