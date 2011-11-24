@@ -129,7 +129,7 @@ body { margin: 0 }
 
 #preview {
   position: relative;
-  width: 330px;
+  width: 320px;
   height: 420px
 }
 
@@ -141,7 +141,7 @@ body { margin: 0 }
   left: 0
 }
 
-#installation { width: 460px }
+#installation { width: 475px }
 
 #features { height: 16px }
 

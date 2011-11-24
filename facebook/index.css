@@ -45,11 +45,10 @@
 
 ul { margin-bottom: 0 }
 
-#mc_embed_signup { margin-top: 103px }
-
 #installation {
   width: 380px;
-  text-align: center
+  text-align: center;
+  vertical-align: top
 }
 
 .button { border: 1px solid #9b001d }
